@@ -45,17 +45,21 @@
       padding: 20px;
       margin-bottom: 20px;
       display: flex;
+      flex-wrap: wrap;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      align-items: center;
     }
     .product img {
       width: 200px;
       height: auto;
       margin-right: 20px;
+      margin-bottom: 10px;
       border-radius: 5px;
     }
     .product-details {
       flex: 1;
+      min-width: 200px;
     }
     .product-details h2 {
       margin-top: 0;
@@ -70,24 +74,25 @@
       margin-top: 10px;
       color: #e91e63;
     }
+    .not-available {
+      background-color: gray;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: not-allowed;
+    }
+    .stock {
+      color: red;
+      font-weight: bold;
+      margin-left: 10px;
+    }
     footer {
       text-align: center;
       padding: 15px 0;
       background-color: #222;
       color: #fff;
       margin-top: 40px;
-    }
-    button {
-      background-color: #e91e63;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    button:hover {
-      background-color: #d81b60;
     }
   </style>
 </head>
@@ -108,21 +113,22 @@
     
     <div class="product">
       <img src="https://via.placeholder.com/200x150.png?text=PC+Gamer" alt="PC Gamer">
+      <img src="https://via.placeholder.com/200x150.png?text=PC+Oficina" alt="PC Oficina">
       <div class="product-details">
         <h2>PC Gamer Extreme</h2>
         <p>Procesador Intel i9, 32GB RAM, Tarjeta gráfica RTX 4080, SSD 1TB. Ideal para gaming y edición profesional.</p>
         <div class="price">$2,500</div>
-        <button>Comprar</button>
+        <button class="not-available">No disponible</button><span class="stock">Quedan: 0</span>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/200x150.png?text=PC+Oficina" alt="PC Oficina">
       <div class="product-details">
         <h2>PC Oficina Plus</h2>
         <p>Procesador Intel i5, 16GB RAM, SSD 512GB. Perfecta para trabajar y navegar de forma fluida.</p>
+        <img src="https://via.placeholder.com/200x150.png?text=PC+Oficina" alt="PC Oficina">
         <div class="price">$800</div>
-        <button>Comprar</button>
+        <button class="not-available">No disponible</button><span class="stock">Quedan: 0</span>
       </div>
     </div>
   </div>
@@ -136,7 +142,7 @@
         <h2>Teclado Mecánico RGB</h2>
         <p>Teclado mecánico con iluminación RGB personalizable. Perfecto para gamers y escritores.</p>
         <div class="price">$120</div>
-        <button>Comprar</button>
+        <button class="not-available">No disponible</button><span class="stock">Quedan: 0</span>
       </div>
     </div>
 
@@ -146,14 +152,15 @@
         <h2>Mouse Gamer Pro</h2>
         <p>Mouse ergonómico con sensor de alta precisión y múltiples botones programables.</p>
         <div class="price">$60</div>
-        <button>Comprar</button>
+        <button class="not-available">No disponible</button><span class="stock">Quedan: 0</span>
       </div>
     </div>
   </div>
 
   <div class="container" id="contacto">
     <h2>Contacto</h2>
-    <p>Envíanos un correo a <strong>ventas@pcmaster.com</strong> o llámanos al <strong>+1 234 567 890</strong>.</p>
+    <p>Para cualquier compra o duda, contacta con nosotros a: <strong>antonioj.perico1@gmail.com</strong></p>
+    <p>Serás atendido lo antes posible.</p>
   </div>
 
   <footer>
